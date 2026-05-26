@@ -35,4 +35,12 @@ let toppers= marks.filter((val)=>{return val>90})
 
 //Q.4 Take a number  as n input from user create an array of number from one to N use the reduce matter to calculate some of the all numbers in the area and use reduce matter to calculate product of all numbers in the array
 let n= parseInt(prompt("Enter a number:"));
-let arr= Array.from({length:n}, (_,i)=>i+1);
+arr=[];
+for(let i=1;i<=n;i++){
+    arr.push(i);
+}
+let sum= arr.reduce((acc,val)=>{return acc+val});
+let product= arr.reduce((acc,val)=>{return acc*val});
+console.log(arr);
+console.log("Sum of numbers from 1 to "+n+" is: "+sum);
+console.log("Product of numbers from 1 to "+n+" is: "+product);
