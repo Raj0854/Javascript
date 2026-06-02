@@ -1,6 +1,11 @@
 let userScore = 0;
 let compScore = 0;
 const emojis = document.querySelectorAll(".emoji")
+let yourscore = document.querySelector("#userscore")
+let comscore = document.querySelector("#compScore")
+let msg = document.querySelector("#msg")
+let msgcontainer = document.querySelector(".msg-container")
+
 
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"]
@@ -9,39 +14,48 @@ const genCompChoice = () => {
 };
 
 const playGame = (userChoice) => {
-    console.log("userChoice = ",userChoice);
+    console.log("userChoice = ", userChoice);
     const comChoice = genCompChoice();
     console.log("comChoice = ", comChoice);
 
-    if (userChoice === comChoice){
+    if (userChoice === comChoice) {
         drawGame();
-    }else{
+    } else {
         let userWin = true;
-        if (userChoice === "rock"){
-            userWin=comChoice === "paper" ? false : true
-        }else if (userChoice === "paper"){
+        if (userChoice === "rock") {
+            userWin = comChoice === "paper" ? false : true
+        } else if (userChoice === "paper") {
             userWin = comChoice === "rock" ? true : false
-        }else {
+        } else {
             // user=scissor
-           userWin= comChoice==="rock"? false:true
+            userWin = comChoice === "rock" ? false : true
         }
         showWinner(userWin)
     }
 
 }
 
-const showWinner=  (userWin)=>{
-    if(userWin){
+const showWinner = (userWin) => {
+    if (userWin) {
         console.log("YOU Win")
-    }else{
+        yourscore.innerText = userScore += 1
+        msg.innerText = "You Win! Play again."
+        msg.style.backgroundColor = "green"
+        
+    } else {
         console.log("Computer Win")
+        comscore.innerText = compScore += 1
+        msg.innerText = "Computer Wins! Play again."
+        msg.style.backgroundColor = "red"
 
     }
 }
 
-const drawGame =()=>{
-    console.log("game was draw")
+const drawGame = () => {
+    msg.innerText = "It's a draw! Play again."
+    msg.style.backgroundColor = "gray"
 }
+
 
 
 emojis.forEach((emoji) => {
