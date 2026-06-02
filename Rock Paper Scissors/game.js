@@ -19,7 +19,7 @@ const playGame = (userChoice) => {
     console.log("comChoice = ", comChoice);
 
     if (userChoice === comChoice) {
-        drawGame();
+        drawGame(userChoice, comChoice);
     } else {
         let userWin = true;
         if (userChoice === "rock") {
@@ -30,29 +30,29 @@ const playGame = (userChoice) => {
             // user=scissor
             userWin = comChoice === "rock" ? false : true
         }
-        showWinner(userWin)
+        showWinner(userWin, userChoice, comChoice)
     }
 
 }
 
-const showWinner = (userWin) => {
+const showWinner = (userWin, userChoice, comChoice) => {
     if (userWin) {
         console.log("YOU Win")
         yourscore.innerText = userScore += 1
-        msg.innerText = "You Win! Play again."
+        msg.innerText = `You chose ${userChoice} and computer chose ${comChoice}. You Win! Play again.`
         msg.style.backgroundColor = "green"
         
     } else {
         console.log("Computer Win")
         comscore.innerText = compScore += 1
-        msg.innerText = "Computer Wins! Play again."
+        msg.innerText = `You chose ${userChoice} and computer chose ${comChoice}. Computer Wins! Play again.`
         msg.style.backgroundColor = "red"
 
     }
 }
 
-const drawGame = () => {
-    msg.innerText = "It's a draw! Play again."
+const drawGame = (userChoice, comChoice) => {
+    msg.innerText = `You chose ${userChoice} and computer chose ${comChoice}. It's a draw! Play again.`
     msg.style.backgroundColor = "gray"
 }
 
