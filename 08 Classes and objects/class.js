@@ -16,6 +16,7 @@ const person1 = new Person('Alice', 30);
 const person2 = new Person('Bob', 25);
 person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
 person2.greet(); // Output: Hello, my name is Bob and I am 25 years old.
+// here "new" keyword is used to create an object from the class. It calls the constructor method and initializes the properties of the object with the values passed as arguments. The greet method is then called on each object to display their information.
 
 // example 02
 class Car {
