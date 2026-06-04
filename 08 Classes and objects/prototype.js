@@ -1,7 +1,7 @@
 const person = {
     name: 'John',
     marks: 90,
-    printMarks: function() {
+    printMarks() {
         console.log(this.marks);
     }
 };
@@ -16,4 +16,24 @@ array.push(4);
 array.pop();
 // here we dont have to define toString() method because it is already defined in the prototype of array. We can access it using array.toString() and it will convert the array into string.
 
-// 
+// however, we can also add our own methods to the prototype of an object. For example, we can add a method to the Array prototype to calculate the sum of all elements in the array:
+Array.prototype.sum = function() {
+    return this.reduce((acc, val) => acc + val, 0);
+};
+console.log(array.sum()); // Output: 10
+
+
+// using __proto_ for accessing function from another object
+const person1 = {
+    name: 'Alice',
+    greet() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+const person2 = {
+    name: 'Bob'
+};
+person2.__proto__ = person1; // Set person1 as the prototype of person2
+person2.greet(); // Output: Hello, my name is Bob
+// In this example, we set person1 as the prototype of person2 using __proto__. This allows person2 to access the greet method defined in person1, and when we call person2.greet(), it uses the greet method from person1 and outputs "Hello, my name is Bob".
