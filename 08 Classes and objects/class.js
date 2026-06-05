@@ -33,3 +33,5 @@ const car1 = new Car('Toyota', 'Camry');
 const car2 = new Car('Honda', 'Civic');
 car1.displayInfo(); // Output: This car is a Toyota Camry.
 car2.displayInfo(); // Output: This car is a Honda Civic.
+
+// 
