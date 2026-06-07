@@ -5,7 +5,8 @@ const person = {
         console.log(this.marks);
     }
 };
-person.printMarks(); // Output: 90
+person.printMarks(); 
+// Output: 90
 
 
 // The printMarks method can be accessed because it is defined on the person object and can access the marks property using this.marks. 
@@ -43,7 +44,7 @@ person2.__proto__ = person1; // Set person1 as the prototype of person2
 person2.greet(); // Output: Hello, my name is Bob
 // In this example, we set person1 as the prototype of person2 using __proto__. This allows person2 to access the greet method defined in person1, and when we call person2.greet(), it uses the greet method from person1 and outputs "Hello, my name is Bob".
 
-// if oject and prototype have same property then it will give preference to object property. for example:
+// if object and prototype have same property then it will give preference to object property. for example:
 const person3 = {
     name: 'Charlie',
     greet() {
