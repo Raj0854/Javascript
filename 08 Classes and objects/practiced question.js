@@ -26,4 +26,3 @@ class Admin extends User{
 }
 let admin = new Admin("dean", "dean@example.com")
 
-//Q.
