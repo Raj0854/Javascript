@@ -9,3 +9,15 @@ class User{
    }
 }
 
+// Q.2 create a new class named "Admin" which inherits from the "User" class. add a new method named "editDetails" that allows the admin to edit the website data.
+class Admin extends User{
+    constructor(name,email){
+        super(name,email)
+    }
+    editDetails(newName,newEmail){
+        this.name = newName
+        this.email = newEmail
+        console.log("Data edited succcessfully")
+
+    }
+}
