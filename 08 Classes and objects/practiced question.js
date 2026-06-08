@@ -9,6 +9,9 @@ class User{
    }
 }
 
+let user1 =  new User("aman","aman@example.com")
+let user2 =  new User("zoya","zoya@example.com")
+
 // Q.2 create a new class named "Admin" which inherits from the "User" class. add a new method named "editDetails" that allows the admin to edit the website data.
 class Admin extends User{
     constructor(name,email){
@@ -21,3 +24,6 @@ class Admin extends User{
 
     }
 }
+let admin = new Admin("dean", "dean@example.com")
+
+//Q.
