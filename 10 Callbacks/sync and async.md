@@ -95,3 +95,4 @@ With async:
 - **Synchronous Programming**: Tasks execute one after another and wait for completion.
 - **Asynchronous Programming**: Tasks can run in the background while other code continues.
 - 
+```
