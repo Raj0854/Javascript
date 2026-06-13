@@ -3,7 +3,15 @@
 // Resolve and reject are the callback provided by JS.
 // formation:
 // let promise = new Promise((resolve, reject)=>{...})
+let num=parseInt(prompt(("Enter a num")))
 let  promise = new Promise((resolve, reject)=>{
-    console.log("i am promise");
-    resolve("success")
+    if (num===5){
+        console.log("i am promise")
+        resolve("success");}
+    else
+        { reject("error")}
+    
 });
+
+promise.then(()=>{console.log("resoved")});
+promise.catch(()=>{console.log("rejected")});
