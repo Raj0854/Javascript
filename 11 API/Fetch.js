@@ -9,11 +9,11 @@ const url = "https://jsonplaceholder.typicode.com/users/1"
 
 const getUser = async () => {
     let response = await fetch(url)//response
-    console.log(response.status)
+    console.log(response)
 }
 // JSON() methods returns a second promise that converts json data into js object which readable.
 
-const getUser = async () => {
+const getUsers = async () => {
     let response = await fetch(url)//response
     let data = await response.json()
     console.log(data)
@@ -24,10 +24,10 @@ const getUser = async () => {
 const button = document.querySelector("#btn")
 const details = document.querySelector("#details")
 
-const getUser = async () => {
+const getUserDetails = async () => {
     let response = await fetch(url)//response
     let data = await response.json()
     console.log(data)
     details.innerText = `ID = ${data.id}\nUsername = ${data.username}\nEmail = ${data.email}`
 }
-button.addEventListener("click",getUser)
+button.addEventListener("click",getUserDetails)
