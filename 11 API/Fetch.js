@@ -20,6 +20,18 @@ const getUsers = async () => {
 
 }
 
+// Using promise then and catch
+function getUser() {
+    fetch(url)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data)=>{
+            console.log(data)
+        })
+};
+
+
 // html connections
 const button = document.querySelector("#btn")
 const details = document.querySelector("#details")
@@ -30,4 +42,4 @@ const getUserDetails = async () => {
     console.log(data)
     details.innerText = `ID = ${data.id}\nUsername = ${data.username}\nEmail = ${data.email}`
 }
-button.addEventListener("click",getUserDetails)
+button.addEventListener("click", getUserDetails)
