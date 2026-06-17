@@ -45,7 +45,7 @@ form button{
     font-size: 1rem;
     color: #fff;
 }
-.msg{
+#msg{
     font-size: 1.75rem;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'C', Courier, monospace; */
 }
