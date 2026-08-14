@@ -17,7 +17,7 @@ do{
 // Q. 2 Write a program  to guess password. The program should prompt the user to enter a password and check if it matches a predefined password. If the password is correct, display a success message; otherwise, display an error message.
 let password="pass123"
 let userInput= prompt("Guess the correct password.")
-``
+
 if (password ===userInput)
     console.log("welcome")
 else
