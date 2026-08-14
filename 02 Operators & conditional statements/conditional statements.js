@@ -1,4 +1,4 @@
-// Conditional Statements are used to perform different actions based on different conditions. In JavaScript, we have several types of conditional statements, including if, else if, else, switch, and ternary operator.
+// Conditional Statements are used to perform different actions based on different conditions. In JavaScript, we have several types of conditional statements, including if,  if else, switch, and ternary operator.
 
 // 1. if statement
 let temperature = 25;
